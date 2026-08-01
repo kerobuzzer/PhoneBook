@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="monospace"
+        android:text="Привет!"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="50dp" />
+
+    <EditText
+        android:id="@+id/login"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/greetings"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/login" />
+
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/login"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/password"/>
+
+    <TextView
+        android:id="@+id/autograph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/autograph"
+        android:fontFamily="monospace"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/next"
+        />
+
+    <TextView
+        android:id="@+id/incorrect_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/skip"
+        android:layout_marginTop="20dp"
+        android:text="Ошибка при входе"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/next"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/next"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/next"
+        android:layout_alignStart="@+id/next"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:text="Продолжить без входа"
+        android:alpha="0.5"/>
+
+
+</RelativeLayout>
